@@ -14,7 +14,7 @@ void main()
 	}
 	cout << endl;
 
-	//циклический сдвиг массива
+	//циклический сдвиг массива влево
 	int number_of_shifts;
 	cout << "Введите с клавиатуры: ";
 	cin >> number_of_shifts;
@@ -34,4 +34,5 @@ void main()
 
 	}
 	cout << endl;
+	
 }

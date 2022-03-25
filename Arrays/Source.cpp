@@ -12,34 +12,39 @@ void main()
 
 		const int SIZE = 5; (объ€вл€ем размер массива)
 		int arr[SIZE]; (объ€вл€ем сам массив)*/
-	const int n = 5;
+	const int n = 10;
 	//кол-во элементов массива(размер)
 	/*int arr[n];*/
 	int arr[n] = {}; //объ€вление массива, инициализаци€
 	/*arr[2] = 123;*/ //обращение ко второму элементу массива
-	cout << "¬ведите элементы массива   (" << n << "шт.):";
+	int minRand;
+	int maxRand;
+	cout << "¬ведите минимально возможное случайное число: "; cin >> minRand;
+	cout << "¬ведите максимально возможное случайное число: "; cin >> maxRand;
+	/*cout << "¬ведите элементы массива   (" << n << "шт.):";*/
 	for (int i = 0; i < n; i++)
 	{
-		cin >> arr[i];
+		/*cin >> arr[i];*/
+		 arr[i] = rand() %( maxRand -minRand)+ minRand;
 	}
-	/*вывод массива на экран:
+	//вывод массива на экран:
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << "\t";
 	}
-	cout << endl;*/
+	cout << endl;
 
+	double sum = 0;
 //вывод сложени€ массивов:
-//	double sum=0;
-//	for (int i = 0; i <n; i++)
-//	{
-//		sum = sum + arr[i];
-//	}
-//	cout << "—умма элементов массива: " << sum <<"\n";
-//	cout << endl;
+	
+	for (int i = 0; i <n; i++)
+	{
+		sum = sum + arr[i];
+	}
+	cout << "—умма элементов массива: " << (double)sum <<"\n";
+	cout << endl;
 
 	//среднее арифметическое массивов:
-	double sum = 0;
 	for (int i = 0; i < n; i++) {
 		sum += arr[i];
 	}
